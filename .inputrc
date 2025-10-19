@@ -1,0 +1,40 @@
+# Ctrl+Space to clear terminal
+"\C-@": "clear\n"
+
+# Unbind the 'v' key in vi-command mode to prevent calling the external editor.
+$if mode=vi
+set keymap vi-command
+v: ""
+$endif
+
+# Make Tab autocomplete regardless of filename case
+set completion-ignore-case on
+
+# Show all completions immediately (no need to press Tab twice)
+set show-all-if-ambiguous on
+
+# Add trailing slash to completed directory names
+set mark-symlinked-directories on
+
+# Color files by type during completion
+set colored-stats on
+
+# Show file type indicators (*/=>@|)
+set visible-stats on
+
+# Prefix common to all completions shown in cyan
+set colored-completion-prefix on
+
+# Page completion results with arrows instead of ringing bell
+set page-completions on
+
+# Use vim keybindings
+set editing-mode vi
+
+# Ctrl+Arrow keys to move between words
+"\e[1;5C": forward-word   # Ctrl+Right
+"\e[1;5D": backward-word  # Ctrl+Left
+
+# Better history search
+"\e[A": history-search-backward  # Up arrow
+"\e[B": history-search-forward   # Down arrow

@@ -22,12 +22,11 @@
         bat
         docker
         python3
-        tailscale
-        (tmux.withPlugins (plugins: [
-          plugins.tmux-sensible
-          plugins.vim-tmux-navigator
-          plugins.tmux-yank
-        ]))
+        tmux
+        tmuxPlugins.sensible
+        tmuxPlugins.vim-tmux-navigator
+        tmuxPlugins.yank
+        tmuxPlugins.tmux-sessionx
       ];
     };
   };

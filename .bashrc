@@ -20,8 +20,12 @@ if command -v fzf &> /dev/null; then
   fi
 fi
 
+if [ -f "$HOME/.inputrc" ]; then
+    bind -f "$HOME/.inputrc"
+fi
+
 # Function to clear the screen with Ctrl + Space
-bind '"\C-@":"clear\n"'
+#bind '"\C-@":"clear\n"'
 
 ## ALIASES
 alias sb='source ~/.bashrc'
@@ -77,3 +81,7 @@ export SUDO_EDITOR="$EDITOR"
 export KUBE_EDITOR=$EDITOR
 export BAT_THEME=ansi
 export KUBECONFIG=$HOME/.kube/config
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+source <(kubectl completion bash)
+complete -o default -F __start_kubectl k
