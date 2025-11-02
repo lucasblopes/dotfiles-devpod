@@ -27,6 +27,9 @@
         tmuxPlugins.vim-tmux-navigator
         tmuxPlugins.yank
         tmuxPlugins.tmux-sessionx
+        ansible
+        iputils
+        kubernetes-helm
       ];
     };
   };
