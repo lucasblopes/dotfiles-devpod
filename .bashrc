@@ -85,3 +85,4 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 source <(kubectl completion bash)
 complete -o default -F __start_kubectl k
+export TERM=xterm-256color
