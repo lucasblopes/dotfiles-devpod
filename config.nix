@@ -1,4 +1,6 @@
 {
+  allowUnfree = true;
+
   packageOverrides = pkgs: with pkgs; {
     myPackages = pkgs.buildEnv {
       name = "tools";
@@ -30,6 +32,7 @@
         ansible
         iputils
         kubernetes-helm
+        kiro-cli
       ];
     };
   };
